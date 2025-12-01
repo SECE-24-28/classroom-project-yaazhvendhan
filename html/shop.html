@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoffeeBean</title>
+    <link rel="icon" type="image/x-icon" href="https://imgs.search.brave.com/vOU2gMFAut36E1f61ZLDurLU4EsXD0xubUNB4LPLUZQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMjAz/Mzg1NjUyNi9waG90/by9jdXAtb2YtaG90/LWNvZmZlZS1vbi1j/b2ZmZWUtYmVhbnMt/d2l0aC1hLWhlYXJ0/LW9mLWZvYW0uanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPV9j/aS00RGdkS2duUmxS/SHdTR2VCMGdpbFB2/QU5zV1ROa3daWEg1/Zmg3NjQ9"></link>
+
+    <style>
+        html,body{
+            scroll-behavior: smooth;
+        }
+
+        nav{
+            position:fixed
+        }
+
+        div{
+            padding: 50px;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        #msg{
+            float: right;
+            font-size: 20px;
+            padding: 20px;
+            width: 50%;
+            
+        }
+        #mq{
+            background-color: rgb(176, 107, 10);
+            padding: 5px;
+        }
+        #ft{
+            background-color: rgb(108, 56, 56);
+        }
+        #itms{
+            display: block;
+            float: right;
+           
+            width: 50%;
+        }
+
+          #op{
+            display: flex;
+        }
+        
+        
+    </style>
+
+
+
+</head>
+<body style="background-color: rgb(43, 9, 9);color: aliceblue;">
+
+    <nav style="background-color:rgb(34, 4, 4);width:100%;padding:10px;text-align:center;">
+        <button><a href  ="#wl" style="color:brown;">Welcome </a></button>
+        <button><a href ="#op" style="color: brown;"> Our Products </a></button>
+        <button><a href ="menu.html" style="color: brown;"> Order</a></button>
+        <button><a href ="#abt" style="color: brown;"> About Us</a></button>
+    </nav><br><br>
+
+    <div id="mq">
+        <h2 style="color:rgb(255, 255, 255);text-align:center;">Special Offer!</h2>
+        <marquee behavior="scroll" direction="left" style="color:rgb(255, 255, 255);font-size:25px;">
+            50% off on all bakery items this weekend. Hurry up!
+        </marquee>
+    </div>
+
+    <br><br>
+    <h1>Welcome to CoffeeBean</h1>
+    <p>Explore our variety of coffee and bakery items!</p>
+
+
+
+    <section>
+        <div id="wl" >
+            <h1>Welcome</h1>
+            <img src="https://imgs.search.brave.com/Ym4OWVDuBMhXiml0ehYMEw4CU7udBRRgfXjnyU9Beus/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi93ZWxj/b21lLWNhcmQtb3Zl/ci13b29kZW4tdGFi/bGUtbmV4dC10by1j/b2ZmZWUtY3VwLTYx/NDk1MTU2LmpwZw" alt="Coffee Beans Owl">
+
+            <p id="msg">Discover the finest selection of coffee beans, expertly brewed to perfection. Whether you prefer a bold espresso or a creamy latte, our coffee shop has something for every coffee lover. Don't forget to try our freshly baked pastries and desserts that perfectly complement your coffee experience. Visit us today and indulge in the rich flavors of our coffee creations!</p>
+        </div>
+
+        
+        <div id="op">
+            <div>
+            <h1>Our Products</h1>
+            <table border = 1 style=margin:50px;>
+        <caption style = font-weight:bold> Hot Drinks</caption>
+        <tr>
+            <th>Item</th>
+            <th>Description</th>
+            <th>price</th>            
+        </tr>
+        <tr>
+            <td>Espresso</td>
+            <td>Single shot of rich espresso</td>
+            <td>&#8377 80</td>
+        </tr>
+        <tr>
+            <td>Cappuccino</td>
+            <td>Espresso with steamed milk and foam</td>
+            <td>&#8377 150</td>
+        </tr>
+        <tr>
+            <td>Latte</td>
+            <td>Smooth espresso with steamed milk</td>
+            <td>&#8377 160</td>
+        </tr>
+        </table>
+
+    <table border = 1 style=margin:50px;>
+        <caption style = font-weight:bold><b>Cold Drinks & Bakery</b></caption>
+        <tr>
+            <th>Item</th>
+            <th>Description</th>
+            <th>price</th>            
+        </tr>
+        <tr>
+            <td>Iced Americano</td>
+            <td>Espresso over ice and cold water</td>
+            <td>&#8377 140</td>
+        </tr>
+        <tr>
+            <td>Cold Brew</td>
+            <td>Smooth cold-brewed coffee</td>
+            <td>&#8377 170</td>
+        </tr>
+        <tr>
+            <td>Chocolate Muffin</td>
+            <td>Freshly baked daily</td>
+            <td>&#8377 90</td>
+        </tr>
+        </table>
+
+        </div>
+        <div id="itms" >
+
+        <img src="https://imgs.search.brave.com/rwKzkOVNTVi0VDved_m4DVvyp82n_z_134G7La2Fsh8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE2/ODM3NzE0MTk2MTMt/MGE2MDhkOGY1Y2Y2/P2l4bGliPXJiLTQu/MS4wJml4aWQ9TTN3/eE1qQTNmREI4TUh4/elpXRnlZMmg4TVRa/OGZHTmhabVVsTWpC/bWIyOWtmR1Z1ZkRC/OGZEQjhmSHd3JmZt/PWpwZyZxPTYwJnc9/MzAwMA" height="250px" alt="CoffeeItems">
+        </div>
+
+        </div>
+        
+
+
+
+        <div id="abt"> 
+            <h1>About us</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor deserunt labore porro nam debitis. Itaque temporibus, ex iste velit mollitia sit dicta at consequuntur deserunt! Beatae eos minima quia quasi!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor deserunt labore porro nam debitis. Itaque temporibus, ex iste velit mollitia sit dicta at consequuntur deserunt! Beatae eos minima quia quasi!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor deserunt labore porro nam debitis. Itaque temporibus, ex iste velit mollitia sit dicta at consequuntur deserunt! Beatae eos minima quia quasi!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor deserunt labore porro nam debitis. Itaque temporibus, ex iste velit mollitia sit dicta at consequuntur deserunt! <br><br>
+                
+            Beatae eos minima quia quasi!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor deserunt labore porro nam debitis. Itaque temporibus, ex iste velit mollitia sit dicta at consequuntur deserunt! Beatae eos minima quia quasi!Itaque temporibus, ex iste velit mollitia sit dicta at consequuntur deserunt! Beatae eos minima quia quasi!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor deserunt labore porro nam debitis. Itaque temporibus, ex iste velit mollitia sit dicta at consequuntur deserunt! Beatae eos minima quia quasi!Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br><br>
+                
+            Dolor deserunt labore porro nam debitis. Itaque temporibus, ex iste velit mollitia sit dicta at consequuntur deserunt! Beatae eos minima quia quasi!Itaque temporibus, ex iste velit mollitia sit dicta at consequuntur deserunt! Beatae eos minima quia quasi!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor deserunt labore porro nam debitis. Itaque temporibus, ex iste velit mollitia sit dicta at consequuntur deserunt! Beatae eos minima quia quasi!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor deserunt labore porro nam debitis. Itaque temporibus, ex iste velit mollitia sit dicta at consequuntur deserunt! Beatae eos minima quia quasi!</p>
+        </div>
+
+    </section>
+
+    <footer id="ft">
+        <p style="text-align:center;">&copy; 2025 Coffee Shop. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>

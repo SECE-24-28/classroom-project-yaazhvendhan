@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoffeeBean</title>
+    <style>
+
+
+        #odr{
+            background-color: rgb(95, 42, 42);
+            padding: 10px;
+            width: 300px;
+        }
+        #cst{
+            background-color: rgb(95, 42, 42);
+            padding: 10px;
+            width: 400px;
+        
+        }
+        #itm{
+            background-color: rgb(95, 42, 42);
+            padding: 10px;
+            width: 300px;
+        }
+
+
+
+    </style>
+</head>
+<body style="background-color: rgb(43, 9, 9);color: aliceblue;">
+    <h1>Order now</h1>
+
+    <form action="order.html" method="get">
+        <table id="cst">
+            <caption style="text-align: left;"><b>Customer Details</b></caption>
+            
+
+            <tr>
+                <td>
+                    
+                <label for="name"> <b> Enter your name:</b></label>
+                <td>
+                <input type="text" name="name" minlength="3" maxlength="20" required>
+                </td>
+                </td>
+            </tr><br>
+            <tr>
+                <td>
+                    <label for="gender"><b>Select your gender:</b></label>
+                    <td>
+                    <select name="gender" >
+                        <option>Select your gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select>
+                    </td>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="number"><b>Enter your phone number:</b></label>
+                    <td>
+                    <input type="tel" name="number" pattern="[0-9]{10}" required>
+                    </td>
+                </td>
+            </tr>
+        </div>
+            
+    
+        </table>
+<br><br>
+<table>
+    <caption style="text-align: left;"><b>Order details</b></caption>
+
+    <tr> 
+                <td> 
+                    <div id="itm">
+                    <label for="item"> <b>Select the items:</b></label> 
+                    <br>
+                    <input type="checkbox" name="item"> Espresso<br>
+                    <input type="checkbox" name="item"> Cappuccino <br>
+                    <input type="checkbox" name="item"> Latte<br>
+                    <input type="checkbox" name="item"> Iced Americano<br>
+                    <input type="checkbox" name="item"> Cold Brew<br>
+                    <input type="checkbox" name="item"> Chocolate Muffin
+                    <br><br>
+                    </div>
+                
+                
+                </td> 
+               
+                
+            </tr>
+</table>
+
+
+<table>
+    <caption style="text-align: left;"><b>Payment details</b></caption>
+    <tr>
+        <td>
+            <div id="odr">
+            <label for="payment">Select the payment method:</label><br>
+            <input type="radio" name="payment" value="cod" required> Cash on Delivery <br>
+            <input type="radio" name="payment" value="card" required> Card Payment <br>
+            <input type="radio" name="payment" value="upi" required> UPI Payment <br>
+            <input type="radio" name="payment" value="netbanking" required> Net Banking
+            </div>
+        </td>
+    </tr>
+</table>
+
+<button type="submit" style="background-color:brown;color:white;padding:10px;font-size:16px;margin-top:20px;">Place Order</button>
+
+
+    </form>
+
+    
+</body>
+</html>
