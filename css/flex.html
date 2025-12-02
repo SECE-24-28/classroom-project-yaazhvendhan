@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex page</title>
+    <style>
+        .container1{
+            background-color: rgb(52, 51, 51);
+            gap:10px;
+            display: flex;
+            /*flex-direction: row;
+            flex-wrap:wrap;*/
+            flex-flow: row wrap;
+
+        }
+
+         .container2{
+            background-color: rgb(52, 51, 51);
+            gap:10px;
+            display: flex;
+            /*flex-direction: row;
+            flex-wrap:wrap;*/
+            flex-flow: row wrap;
+            justify-content: center;
+
+        }
+         .container3{
+            background-color: rgb(52, 51, 51);
+            gap:10px;
+            display: flex;
+            /*flex-direction: row;
+            flex-wrap:wrap;*/
+            flex-flow: row wrap;
+            justify-content: space-between;
+
+        } .container4{
+            background-color: rgb(52, 51, 51);
+            gap:10px;
+            display: flex;
+            /*flex-direction: row;
+            flex-wrap:wrap;*/
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+
+        } .container5{
+            background-color: rgb(52, 51, 51);
+            gap:10px;
+            display: flex;
+            /*flex-direction: row;
+            flex-wrap:wrap;*/
+            flex-flow: row wrap;
+            justify-content: space-around;
+
+        } .container6{
+            background-color: rgb(52, 51, 51);
+            gap:10px;
+            display: flex;
+            /*flex-direction: row;
+            flex-wrap:wrap;*/
+            flex-flow: row wrap;
+            justify-content: flex-end;
+
+        }
+
+
+
+
+
+        .box{
+            background-color: black;
+            color: white;
+            height: 150px;
+            width:100px;
+            
+        }
+    </style>
+
+
+
+
+</head>
+<body>
+
+    <h1 style="text-align: center;">flex and justify-content examples</h1>
+
+<h2>flex-flow: row wrap; Justify Content: Default (flex-start)</h2>
+    <div class="container1">
+        <div class="box">Item-1</div>
+        <div class="box">Item-2</div>
+        <div class="box">Item-3</div>
+        <div class="box">Item-4</div>
+        <div class="box">Item-5</div>
+        <div class="box">Item-6</div>
+    </div>
+<br><br><br>
+<h2>flex-flow: row wrap; Justify Content: Center</h2>
+
+     <div class="container2">
+        <div class="box">Item-1</div>
+        <div class="box">Item-2</div>
+        <div class="box">Item-3</div>
+        <div class="box">Item-4</div>
+        <div class="box">Item-5</div>
+        <div class="box">Item-6</div>
+    </div>
+<br><br><br>
+
+<h2>flex-flow: row wrap; Justify Content:space-between</h2>
+
+     <div class="container3">
+        <div class="box">Item-1</div>
+        <div class="box">Item-2</div>
+        <div class="box">Item-3</div>
+        <div class="box">Item-4</div>
+        <div class="box">Item-5</div>
+        <div class="box">Item-6</div>
+    </div>
+<br><br><br>
+
+<h2>flex-flow: row wrap; Justify Content:space-evenly</h2>
+
+     <div class="container4">
+        <div class="box">Item-1</div>
+        <div class="box">Item-2</div>
+        <div class="box">Item-3</div>
+        <div class="box">Item-4</div>
+        <div class="box">Item-5</div>
+        <div class="box">Item-6</div>
+    </div>
+
+<br><br><br>
+
+<h2>flex-flow: row wrap; Justify Content:space-around</h2>
+
+     <div class="container5">
+        <div class="box">Item-1</div>
+        <div class="box">Item-2</div>
+        <div class="box">Item-3</div>
+        <div class="box">Item-4</div>
+        <div class="box">Item-5</div>
+        <div class="box">Item-6</div>
+    </div>
+
+<br><br><br>
+<h2>flex-flow: row wrap; Justify Content:flex-end</h2>
+
+     <div class="container6">
+        <div class="box">Item-1</div>
+        <div class="box">Item-2</div>
+        <div class="box">Item-3</div>
+        <div class="box">Item-4</div>
+        <div class="box">Item-5</div>
+        <div class="box">Item-6</div>
+    </div>
+    
+</body>
+</html>

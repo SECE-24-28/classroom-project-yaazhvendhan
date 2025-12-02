@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexCards</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        .container1,.container2,.container3{
+            background-color: aquamarine;
+            display: flex;
+            flex-flow:row wrap;
+            gap:10px;   
+            justify-content: center;
+            padding:25px;
+            
+
+        }
+
+        .card{
+            background-color: beige;
+            color: rgb(0, 0, 0);
+            border: 2px solid black;
+            border-radius: 5px;
+            width: 200px;
+            flex:1;
+        }
+    </style>
+
+
+
+
+</head>
+<body>
+
+    <div class="container1">
+        <div class="card">
+            <h3>Card 1</h3>
+            <p>This is the first card</p>
+        </div>
+                <div class="card">
+            <h3>Card 2</h3>
+            <p>This is the second card</p>
+        </div>
+                <div class="card">
+            <h3>Card 3</h3>
+            <p>This is the third card</p>
+        </div>
+    </div>
+
+
+
+
+    
+
+    
+</body>
+</html>
