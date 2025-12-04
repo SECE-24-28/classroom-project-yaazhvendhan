@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <script>
+        function press(){
+            let body=document.getElementById("main");
+            let hd=document.createElement("h1");
+            hd.innerHTML="Hi this is Yaazh";
+            hd.style.backgroundColor="Black";
+            hd.style.color="White";
+            body.appendChild(hd);
+            
+        }
+         
+        function modify(){
+            let body=document.getElementById("main");
+            let me=document.getElementById("me");
+           
+            me.innerHTML="I am modified";
+            
+            me.style.backgroundColor="white";
+            me.style.color="black";
+        }
+        function remove(){
+            let body=document.getElementById("main");
+            let rm=document.getElementById("rm");
+            body.removeChild(rm);
+            alert("Removed");
+        }
+    </script>
+
+
+
+
+</head>
+<body id="main">
+    <button onclick="press()">Click Me</button>
+    <h1 id="me" style="background-color: black;color: white;" >Modify me</h1>
+    <button onclick="modify()">Modify</button>
+    <h1 id="rm">Remove me</h1>
+    <button onclick="remove()">Click to remove</button>
+
+    
+</body>
+</html>
