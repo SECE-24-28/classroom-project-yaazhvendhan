@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script>
+      function sum(){
+        let n1=parseFloat(document.getElementById("num1").value);
+        let n2=parseFloat(document.getElementById("num2").value);
+        let res=n1+n2;
+        document.getElementById("result").value=res;
+      }
+      function diff(){
+        let n1=parseFloat(document.getElementById("num1").value);
+        let n2=parseFloat(document.getElementById("num2").value);
+        let res=n1-n2;
+        document.getElementById("result").value=res;
+      }
+      function pro(){
+        let n1=parseFloat(document.getElementById("num1").value);
+        let n2=parseFloat(document.getElementById("num2").value);
+        let res=n1*n2;
+        document.getElementById("result").value=res;
+      }
+      function div(){
+        let n1=parseFloat(document.getElementById("num1").value);
+        let n2=parseFloat(document.getElementById("num2").value);
+        let res=n1/n2;
+        document.getElementById("result").value=res;
+      }
+    </script>
+    <style>
+
+    </style>
+
+
+
+
+</head>
+<body>
+    <h1 style="color:blue ;margin-left:44%;">Calculator</h1>
+    <div style="background-color: aliceblue; width: 300px; padding: 200px; 
+    border-radius:25px;margin-left:30%;">
+
+    <div style="background-color: white; padding:20px;align-items:center; border-radius:15px;">
+        <label for="num1">Number 1:</label>
+        <input type="number" id="num1" placeholder="Enter first number">
+    </div><br><br>
+    <div style="background-color: white; padding:20px;align-items:center; border-radius:15px;">
+        <label for="num2">Number 2:</label>
+        <input type="number" id="num2" placeholder="Enter second number">
+    </div><br><br>
+    <div id="opt" style="background-color: white; padding:20px;align-items:center; border-radius:15px;padding:50px;">
+        <button onclick="sum()" style="padding:20px;margin-left:4%;background-color: azure;font-size: large;border-radius: 17px;">+</button>
+        <button onclick="diff()" style="padding:20px;margin-left:40%;background-color: azure;font-size: large;border-radius: 17px;">-</button><br>
+        <button onclick="pro()" style="padding:20px;margin-left:4%;margin-top:40%;background-color: azure;font-size: large;border-radius: 17px;">*</button>
+        <button onclick="div()" style="padding:20px;margin-left:40%;background-color: azure;font-size: large;border-radius: 17px;">/</button>
+    </div><br><br>
+
+    <div style="background-color: white; padding:20px;align-items:center; border-radius:15px;">
+        <label for="result">Result:</label>
+        <input type="text" id="result" readonly>
+    </div>
+    </div>
+    
+</body>
+</html>

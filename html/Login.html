@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoffeeBean</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+
+        .container{
+            display: flex;
+            flex-flow :column wrap;
+            gap:10px;
+            width: 50%;
+            margin: auto;
+            margin-top: 150px;
+            border: 5px solid rgb(163, 255, 232);
+            padding:50px;
+            background-color: azure;
+            border-radius:15px;
+            position: relative;
+            
+            
+        }
+        .innerContainer{
+            display: flex;
+            flex-flow :column wrap;
+            gap:20px;
+            justify-content: center;
+            
+            
+        }
+        .ip{
+            
+            position:relative;
+            justify-content: center;
+            
+            
+
+            
+            
+        }
+
+
+
+
+
+
+    </style>
+
+
+
+</head>
+<body style="background-image: url('coffee-beans-owl.jpg');"">
+    <h1 style="text-align: center;">login</h1><br><br>
+    <div class="container">
+        <div class="innerContainer">
+            <div class="ip">
+            <label for="username" name="username">Username</label>
+            
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            <br><br></div>
+            <div class="ip">
+            <label for="password" name="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <br><br></div>
+            
+            <div class="ip">
+            <button type="submit" style="background-color: rgb(207, 188, 225);font-size:large;border-radius: 5px;" >Login</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

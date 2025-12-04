@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        #container{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+
+    </style>
+
+
+    <script>
+        let nums=0;
+        let imgs=["astronaut-purple.jpg","camel_sun.png","BMW_Light.jpg"];
+        function prevImg(){
+            nums--;
+            if(nums<0){
+                nums=imgs.length-1;
+            }
+            let img=document.getElementById("img");
+            img.src=imgs[nums];
+        }
+        function nextImg(){
+            nums++;
+            if(nums>imgs.length-1){
+                nums=0;
+            }
+            let img=document.getElementById("img");
+            img.src=imgs[nums];
+        }
+
+    </script>
+</head>
+<body>
+    
+    <div id="container">
+    <div id="ig">
+    <img src="astronaut-purple.jpg" alt="image"width=400 height=300 id="img">
+    </div>
+    <div id="bt">
+    <button onclick="prevImg()">Previous</button>
+    <button onclick="nextImg()">Next</button>
+    </div>
+    </div>
+   
+    
+</body>
+</html>

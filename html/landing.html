@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoffeeBean</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        ol{
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            
+            
+            
+        }
+        li,h1{
+            color: white;
+            padding-left: 5px;
+        }
+
+        li{
+            font-size: 1.5rem;
+        }
+
+
+
+        nav{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: rgb(35, 9, 9);
+            align-items: center;
+            
+        }
+
+        video{
+            width:100%;
+            height:100%;
+            position:fixed;
+            top:0px;
+            left:0px;
+            object-fit: cover;
+            z-index: -1;
+
+        }
+
+
+        .text{
+            position: fixed;
+            top: 250px;
+            left: 3%;
+            color: white;
+
+        }
+        p,h3{
+            color: white;
+            width:700px;
+
+
+        }
+        p{
+            font-size: x-large;
+        }
+
+
+
+        button{
+            border-radius: 10px;
+            margin-top: 10px;
+            padding: 10px;
+            font-size: larger;
+            cursor:pointer;
+            transition: all 0.3s;
+
+
+        }
+        button:hover{
+            letter-spacing: 4px;
+            background-color: brown;
+            color: black;
+        }
+
+        img{
+            width:50px;
+            height:50px;
+            border-radius: 30px;
+        }
+        footer{
+            position:fixed;
+            left:20px;
+            bottom:10px;
+        }
+        .logo:hover{
+            transform: translateY(-5px);
+        
+        }
+        
+       
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>CoffeeBean</h1>
+        <ol>
+            <li ><a href="shop.html" style="text-decoration: none;color: white;">Home</a></li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Order</li>
+        </ol>
+    </nav>
+
+    <main>
+        <video src="coffeebean.mp4"  autoplay muted playsinline loop></video>
+    </main>
+
+    <div class="text">
+        <h3 style="font-size: x-large;">To bean,</h3>
+        <h1>Or not to bean?</h1><br>
+        <p>I bought a pound of coffee.
+
+The captain leaves the room and comes back with coffee.
+
+Just call him on the phone or invite him to coffee and talk to him.
+
+The First Draft Book Bar serves up coffee, wine, beer and snacks in the middle of the brick-walled store.
+
+There is no better way to start the day than with a great cup of coffee.
+
+Add a shot of espresso or a splash of black coffee to make a cafe mocha.
+
+The coffee is sweet and slightly thick from the creamer.
+
+Howard Schultz said, just lower the price of your coffee.</p><br>
+
+        <button onclick="location.href='shop.html'">Take a sip</button>
+    </div>
+
+    <footer>
+        <ol >
+            <li class="logo"><img src="Red Hat.jpg"> </li>
+            <li class="logo"><img src="camel_sun.png"> </li>
+            <li class="logo"><img src="linux_circulatory.jpg"> </li>
+            <li class="logo"><img src="miles-morales-logo.jpg"> </li>
+        </ol>
+    </footer>
+
+
+
+
+    
+</body>
+</html>

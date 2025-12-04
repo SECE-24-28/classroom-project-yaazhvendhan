@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FirstJS</title>
+    <style>
+        input{
+            width: 200px;
+            height: 30px;
+            margin: 10px;
+            font-size: 20px;
+            
+        }
+        button{
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+            margin: 10px;
+        }
+    </style>
+
+
+
+    <script>
+        function demo(){
+            let tx=document.getElementById("t1").value;
+            document.getElementById("t2").value=tx;
+
+            let tx2=document.getElementById("t3").value;
+            alert(tx2);
+            
+            //alert(tx);
+        }
+    </script>
+
+    
+</head>
+<body>
+    <input type="text" name="text1" id="t1" placeholder="text1">
+    <input type="text" name="text2" id="t2" placeholder="text2">
+    <button onclick="demo()">click me</button>
+    <input type="text" name="text3" id="t3" placeholder="text3">
+    <button onclick="demo()" style="width: 20%;">click me too</button>
+
+
+    
+</body>
+</html>
