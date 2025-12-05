@@ -6,26 +6,129 @@
     <title>Task</title>
     <script>
         let addList;
+        let index=0;
+        let num=0;
         function add(){
             let body=document.getElementById("main");
-            addList=document.createElement("li");
-            addList.innerHTML=document.getElementById("task").value;
+            let tsk=document.getElementById("task");
+           
+
+            if(tsk.value.trim()===""){
+            return;
+            }
+            
+            index++;
+            num=index;
+
+           addList=document.createElement("h3");
+           addList.id=index;
+           addBox=document.createElement("input");
+
+           addBox.type='checkbox';
+           addBox.id=index;
+           addBox.style.height="20px";
+           addBox.style.marginTop="1px";
+           
+
+           addBox.addEventListener("click", function () {
+           let rm=document.getElementById(this.id);
+           rm.remove();
+           this.remove();
+           num--;
+           if(num===0) index=0;
+           
+           
+            });
+              
+            addList.innerHTML=index+". "+tsk.value;
             body.appendChild(addList);
 
-        }
-        function remove(){
-            let body = document.getElementById("main");
+            body.appendChild(addBox);
+
+            /*
+            const del = document.createElement("button");
+            del.textContent = "Delete";
+      
+            del.addEventListener("click", function () {
             addList.remove();
+            });
+            addList.appendChild(del);
+            */
+           
+            tsk.value = "";
+
+        }
+        let md="Dark mode";
+
+        function mode(){
+        let body=document.getElementById("tk");
+        
+        let bt=document.getElementById("mode");
+        bt.addEventListener("click",mode)
+        function mode(){
+
+        if(md ==="Light mode"){
+            body.style.backgroundColor="Black";
+            body.style.color="White";
+            md ="Dark mode"
+            
+        }else{
+            body.style.backgroundColor="White";
+            body.style.color="Black";
+            md ="Light mode"
+            
+        }
+
+        }
             
             
         }
     </script>
+
 </head>
-<body >
-    <input type="text" name="task" id="task" placeholder="Enter your task">
-    <button id = "add" onclick="add()">add task</button>
-    <ol id="main"></ol>
-    <button id="remove" onclick="remove()">remove</button>
+    <style>
+        #tk{
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            gap:20px;
+            background-color: black;
+            font-size: x-large;
+            flex:1;
+            
+        }
+
+        #inner{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap:40px;
+        }
+        #main{
+            color: white;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            
+            
+            
+           
+        }
+
+    </style>
+<body id="tk">
+    <div>
+    <input style="height: 50px; width: 500px;border-radius: 25px;text-align: center;font-size: large;" type="text" name="task" id="task" placeholder="Enter your task"><br>
+    <div id="inner">
+    <button style="height: 50px; width: 100px;border-radius: 25px;text-align: center;font-size: large;" id = "add" onclick="add()">add task</button>
+    <button style="height: 50px; width: 100px;border-radius: 25px;text-align: center;font-size: large;" id="mode" onclick="mode()">Switch</button>
+    </div>
+   
+    <ol id="main"> </ol>
+    
+</div>
     
 </body>
 </html>

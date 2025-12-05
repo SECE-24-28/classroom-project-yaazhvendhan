@@ -54,25 +54,56 @@
 
 
 </head>
-<body style="background-image: url('coffee-beans-owl.jpg');"">
-    <h1 style="text-align: center;">login</h1><br><br>
+<body style="background-image: url('coffee-beans-owl.jpg');">
+    <h1 style="text-align: center;margin-top: 100px;background-color: rgb(96, 25, 25);padding:10px;width: 10%;align-items: center;margin-left:45%;border-radius: 25px;">login</h1><br><br>
     <div class="container">
         <div class="innerContainer">
             <div class="ip">
-            <label for="username" name="username">Username</label>
+            <label id="unm" for="username" name="username">Username</label>
             
             <input type="text" id="username" name="username" placeholder="Enter your username" required>
             <br><br></div>
             <div class="ip">
-            <label for="password" name="password">Password</label>
+            <label ID="pss" for="password" name="password">Password</label>
             <input type="password" id="password" name="password" placeholder="Enter your password" required>
             <br><br></div>
             
             <div class="ip">
-            <button type="submit" style="background-color: rgb(207, 188, 225);font-size:large;border-radius: 5px;" >Login</button>
+            <button id="bt" type="submit" style="background-color: rgb(207, 188, 225);font-size:large;border-radius: 5px;" >Login</button>
             </div>
+
+            <h2 id="ms"></h2>
         </div>
     </div>
+
+
+
+
+    <script>
+        let un=document.getElementById("unm");
+        let ps=document.getElementById("pss");
+        let btn= document.getElementById("bt");
+        let msg=document.getElementById("ms");
+
+        
+        btn.addEventListener("click",(e)=>{
+            btn.preventDefault();
+            if(un.value!="" && ps.value!=""){
+                if(ps.length>8){
+                    msg.innerHTML="Login Success..."
+                    
+                }
+                else{
+                    msg.innerHTML="Password Should be more than 8 Character"
+                }
+            }
+            else{
+                msg.innerHTML="Username and Password should not be empty"
+            }
+        })
+
+
+    </script>
     
 </body>
 </html>
