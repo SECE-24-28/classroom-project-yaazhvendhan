@@ -2,15 +2,27 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Header from './components/Header'
+import NavBar from './components/NavBar'
+import HeroSection from './components/HeroSection'
+// import Testimonials from './components/Testimonials'
 
 function App() {
 
+
   return (
-    <>
-      <div>
-        <h1>Welcome to React App</h1>
-      </div>
-    </>
+    
+    <div className='di' >
+      <NavBar />
+      <Header />
+      <HeroSection />
+      {/* <Testimonials /> */}
+     </div>
+     
+
+     
+      
+    
   )
 }
 

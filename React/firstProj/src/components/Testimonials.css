@@ -1,0 +1,22 @@
+/* .tmls{
+    display: flex;
+    flex-flow: column wrap;
+    position: relative;
+    top:250px;
+    background-color:white;
+     padding: 60px;
+}
+
+
+.rws{
+    background-color: white;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    gap:50px;
+}
+.rws1{
+    background-color: rgb(229, 185, 153);
+    padding:60px;
+    border-radius: 35px;
+} */
