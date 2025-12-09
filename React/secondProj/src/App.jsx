@@ -1,12 +1,10 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 
 function App() {
   const [list,setList]=useState([
-    {id:1,sname:"Vinoth",fee:false},
+    {id:1,sname:"Vinodh",fee:false},
     {id:2,sname:"Ram",fee:true},
     {id:3,sname:"Sita",fee:true},
     {id:4,sname:"Noor",fee:false}
@@ -15,7 +13,7 @@ function App() {
 
   const handleDelete=(id)=>
   {
-    const newList=list.filter((ls)=>ls.id!=id)
+    const newList=list.filter((ls)=>ls.id!==id)
     setList(newList)
   }
   
