@@ -9,6 +9,11 @@
   font-size: large;
   
 }
+body{
+  background-color: white;
+  min-height: 100vh;
+  margin: 0;
+}
 
 .di{
   width: 100%;

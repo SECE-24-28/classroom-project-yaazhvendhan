@@ -1,16 +1,16 @@
 .hdv{
     display: flex;
     flex-flow: column wrap;
-    top:40px;
+    top:60px;
     position: relative;
     background-color:white;
-    padding:40px;
+    padding:70px;
+    
 
 }
 .mq1{
     background-color: rgb(192, 153, 124);
     padding:20px;
-    
     font-size: x-large;
     /* width: 100%; */
 }

@@ -1,0 +1,47 @@
+#root {
+  /* max-width: 1280px; */
+  margin: 0 ;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.container{
+  display: flex;
+  flex-flow: column wrap;
+ background-color: white;
+  margin-left: 700px;
+  color: black;
+  padding: 150px;
+  gap:10px;
+}
+
+.innerContainer{
+  display: flex;
+  flex-flow: row wrap;
+  background-color: rgb(247, 255, 136);
+  min-width:100%;
+  gap:70px;
+  
+}
+
+
+
+
+
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
