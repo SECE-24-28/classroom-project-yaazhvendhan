@@ -31,12 +31,13 @@ useEffect(()=>{
 
   return (
     <div className='tmls'>
-        <div class='rc'></div>
+        <div class='rc'>
 
         <h3>Our Customer Reviews</h3>
         <div className="rws">
             <p className="rws1">{testimonial[currentIndex]}</p>
            
+        </div>
         </div>
         
 
