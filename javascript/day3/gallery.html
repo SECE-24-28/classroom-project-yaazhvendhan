@@ -5,13 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
     <style>
-        #container{
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-            align-items: center;
+        *{
+            margin:0px;
+            padding:0px;
         }
-        
+
+        body{
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            padding-top: 90px;
+            background-color: black;
+        }
+        h1{
+            color:gold;
+            text-align: center;
+            
+        }
+
+        #ig{
+            display: flex;
+            justify-content: center;
+            gap:10px;
+
+        }
+        #bt{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+        button{
+            background-color:black;
+            color: gold;
+            padding:10px;
+            padding-left: 25px;
+            padding-right: 25px;
+            font-size: xx-large;
+        }
+
 
     </style>
 
@@ -41,12 +72,15 @@
 <body>
     
     <div id="container">
+        <h1>Gallery</h1>
     <div id="ig">
-    <img src="astronaut-purple.jpg" alt="image"width=400 height=300 id="img">
+        <button onclick="prevImg()"><</button>
+    <img src="astronaut-purple.jpg" alt="image"width=75% height=75% id="img">
+    <button onclick="nextImg()">></button>
     </div>
     <div id="bt">
-    <button onclick="prevImg()">Previous</button>
-    <button onclick="nextImg()">Next</button>
+    
+    
     </div>
     </div>
    
