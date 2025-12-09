@@ -9,44 +9,77 @@
             margin:0px;
             padding:0px;
         }
-
-        .container{
+        body{
             display: flex;
-            flex-flow :column wrap;
-            gap:10px;
-            width: 50%;
-            margin: auto;
-            margin-top: 150px;
-            border: 5px solid rgb(163, 255, 232);
-            padding:50px;
-            background-color: azure;
-            border-radius:15px;
-            position: relative;
-            
+            flex-flow: row wrap;
+            padding-top: 200px;
+            gap:100px;
+            padding-left: 50px;
+            align-items: center; 
             
         }
+
+        #txt{
+            display: flex;
+            flex-flow: column wrap;
+            align-items: flex-start;
+            justify-content: center;
+            width:580px;
+        }
+
+        .incn{
+            display: flex;
+            flex-flow: column wrap;
+            justify-content:center;
+            /* padding-left:150px; */
+            padding-right: 40px;
+            align-items: flex-start;
+            flex: 1;
+        }
+
+
+
+
         .innerContainer{
+            background-color: aliceblue;
+            padding:70px;
+            border-radius: 25px;
+            font-size: large;
+        }
+        #bt1,#bt2{
+            background-color:rgb(132, 67, 22);
+            padding:6px;
+            padding-right: 25px;
+            padding-left: 25px;
+            border-radius: 10px;
+            color: beige;
+            font-size: large;
+        }
+        #ip{
+            padding: 5px;
+            border-radius: 10px;
+        }
+        .cfb{
+            line-height: 25px;
+            font-size: x-large;
+            color: rgb(40, 18, 3);
+        }
+
+        .idv{
             display: flex;
-            flex-flow :column wrap;
-            gap:20px;
-            justify-content: center;
-            
-            
-        }
-        .ip{
-            
-            position:relative;
-            justify-content: center;
-            
-            
-
-            
+            justify-content: space-between;
             
         }
 
+        #tcfb{
+            font-size: 50px;
+            color: rgb(132, 67, 22);
 
-
-
+        }
+        #anch{
+            text-decoration: none;
+            padding-left: 55px;
+        }
 
 
     </style>
@@ -55,35 +88,65 @@
 
 </head>
 <body style="background-image: url('coffee-beans-owl.jpg');">
-    <h1 style="text-align: center;margin-top: 100px;background-color: rgb(96, 25, 25);padding:10px;width: 10%;align-items: center;margin-left:45%;border-radius: 25px;">login</h1><br><br>
-    <div class="container">
+
+    <div id="txt">
+        <h2 id="tcfb">CoffeeBean</h2><br>
+        <p class="cfb">Discover the finest selection of coffee beans, expertly brewed to perfection. Visit us today and indulge in the rich flavors of our coffee creations!</p>
+    </div>
+
+
+    <div class="incn">
         <div class="innerContainer">
-            <div class="ip">
-            <label id="unm" for="username" name="username">Username</label>
+
+            <div>
+            <label id="unm" for="username" name="username">Username : </label>
             
-            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            <input type="text" id="ip" name="username" placeholder="Enter your username" required>
             <br><br></div>
-            <div class="ip">
-            <label ID="pss" for="password" name="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <div>
+            <label id="pss" for="password" name="password">Password :  </label>
+
+            <input type="password" id="ip" name="password" placeholder="Enter your password" required>
+            <br><br>
+            <a id="anch" href="https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0">forgotten password?</a>
             <br><br></div>
+
+
+            <br>
+            <div class="idv">
             
             <div class="ip">
-            <button id="bt" type="submit" style="background-color: rgb(207, 188, 225);font-size:large;border-radius: 5px;" >Login</button>
+            <button id="bt1" type="submit" onclick="logged()">Login</button>
             </div>
 
-            <h2 id="ms"></h2>
+            <div class="ip">
+            <button id="bt2" type="submit" >Register</button>
+            </div>
+            </div>
+
         </div>
-    </div>
+        </div>
 
 
 
 
     <script>
-        let un=document.getElementById("unm");
-        let ps=document.getElementById("pss");
-        let btn= document.getElementById("bt");
-        let msg=document.getElementById("ms");
+        let un=document.getElementById("ip");
+        // let ps=document.getElementById("pss");
+        let btn= document.getElementById("bt1");
+
+        function logged(){
+            if(un==null)
+             {
+                alert("Enter your username and password");
+            }
+            else{
+                alert("SuccessFully Logged In")
+                
+            }
+        }
+        
 
         
         btn.addEventListener("click",(e)=>{
