@@ -7,10 +7,9 @@ import { useEffect } from 'react'
 
 const Testimonials = () => {
 
-const testimonial=["Their iced Americano keeps me going all day. It’s stronger and smoother than any other coffee shop’s version! -James T","I love the personalized touch, every order comes with a handwritten note. It makes me feel valued every time -Smith ","I tried other roasters, but always come back to CoffeeBean. The beans are fresh, the flavor is unmatched, and delivery is lightning-fast.-luna"]
+const testimonial=["Their iced Americano keeps me going all day. It’s stronger and smoother than any other coffee shop’s version! -Shankar L","I love the personalized touch, every order comes with a handwritten note. It makes me feel valued every time -Sujith ","I tried other roasters, but always come back to CoffeeBean. The beans are fresh, the flavor is unmatched, and delivery is lightning-fast.-luna"]
 
 const [currentIndex,setCurrentIndex]=useState(0)
-
 useEffect(()=>{
     const id=setInterval(()=>
     {

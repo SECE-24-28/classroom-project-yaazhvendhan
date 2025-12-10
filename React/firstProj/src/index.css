@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    color: rgb(83, 40, 8);
     
     /* box-sizing: border-box; */
 }
