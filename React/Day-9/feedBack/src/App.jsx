@@ -21,7 +21,7 @@ function App() {
 
   useEffect(()=>
   {
-    const filterd=posts.filter((post)=>(post.title).includes(search.toLowerCase()))
+    const filterd=posts.filter((post)=>(post.title.toLowerCase()).includes(search.toLowerCase()))
     setSearchResult(filterd)
   },[posts,search])
 
