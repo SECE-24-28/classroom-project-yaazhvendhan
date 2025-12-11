@@ -6,18 +6,31 @@ const Home = () => {
 
   return (
     <div>
+      <table className='tble'>
+                  <tr>
+            <td>Title</td>
+            <td>Date&Time</td>
+            <td>Body</td>
+          </tr>
             {
       searchResult.map((post)=>
-        <div key={post.id}>
-        <h3>{post.title}</h3>
-        <p>{post.datetime}</p>
-        <p>{post.body}</p>
-        <hr />
-        </div>
+      <tbody>
+        
+
+          <tr>
+            <td>{post.title}</td>
+            <td>{post.datetime}</td>
+            <td>{post.body}</td>
+          </tr>
+          </tbody>
+
+       
+     
 
       
       )
     }
+     </table>
     </div>
   )
 }
