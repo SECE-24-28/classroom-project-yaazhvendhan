@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import DataContext from './context/DataContext'
 
-const Home = ({searchResult}) => {
+const Home = () => {
+  const{searchResult}=useContext(DataContext)
+
   return (
     <div>
             {
