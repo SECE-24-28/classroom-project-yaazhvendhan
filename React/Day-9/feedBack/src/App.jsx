@@ -6,6 +6,7 @@ import './App.css'
 function App() {
   const [posts,setPosts]=useState([])
   const [search,setSearch] = useState("")
+  const [searchResult,setSearchResult]=useState([])
 
   useEffect(()=>
   {
@@ -16,13 +17,24 @@ function App() {
     fetData()
   },[])
 
+
+  useEffect(()=>
+  {
+    const filterd=posts.filter((post)=>(post.title).includes(search.toLowerCase()))
+    setSearchResult(filterd)
+  },[posts,search])
+
+
+
   return (
     <>
     <input type="text" value={search} onChange={(e)=> setSearch(e.target.value)} />
-    <Home posts={posts}/>
+    <Home searchResult={searchResult}/>
 
     </>
   )
 }
 
 export default App
+
+

@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Home = ({posts}) => {
+const Home = ({searchResult}) => {
   return (
     <div>
             {
-      posts.map((post)=>
+      searchResult.map((post)=>
         <div key={post.id}>
         <h3>{post.title}</h3>
         <p>{post.datetime}</p>
