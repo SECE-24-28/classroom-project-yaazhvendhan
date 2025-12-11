@@ -11,14 +11,51 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  
 }
 table,th,td{
   border-collapse: collapse;
-  border:1px solid white;
+  border:1px solid  cornflowerblue;
   padding:10px;
   padding-left: 100px;
   padding-right: 100px;
 }
+
+.srch{
+  padding: 8px;
+  text-align: center;
+  font-size: large;
+  border: solid rgb(235, 212, 9) 1px;
+  border-radius: 8px;
+}
+.tle{
+  padding: 20px;
+  font-size: large;
+  text-align: center;
+  border: solid rgb(20, 220, 200) 1px;
+  border-radius: 10px;
+
+}
+.bdy{
+  padding:35px;
+  padding-left: 100px;
+  padding-right: 100px;
+  text-align: center;
+  font-size: large;
+  border: solid rgb(20, 220, 200) 1px;
+  border-radius: 10px;
+
+}
+
+.btn{
+  background-color: crimson;
+  padding: 10px;
+  padding-left: 35px;
+  padding-right: 35px;
+  text-align: center;
+}
+
 
 a {
   font-weight: 500;

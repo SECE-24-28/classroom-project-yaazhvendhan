@@ -6,7 +6,7 @@ const Search = () =>
         const{search,setSearch}=useContext(DataContext)
   return (
     <div>
-        <input type="text" placeholder='search' value={search} onChange={(e)=> setSearch(e.target.value)} />
+        <input type="text" placeholder='Search' className='srch' value={search} onChange={(e)=> setSearch(e.target.value)} />
     </div>
   )
 }

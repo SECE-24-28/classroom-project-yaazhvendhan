@@ -17,6 +17,7 @@ function App() {
             <hr />
     <AddPost />
     <hr />
+    <br /> 
     <Home />
 </DataProvider>
     </>
