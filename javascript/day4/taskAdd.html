@@ -22,12 +22,13 @@
 
            addList=document.createElement("h3");
            addList.id=index;
-           addBox=document.createElement("input");
 
+           addBox=document.createElement("input");
            addBox.type='checkbox';
+
            addBox.id=index;
            addBox.style.height="20px";
-           addBox.style.marginTop="1px";
+        //    addBox.style.marginTop="1px";
            
 
            addBox.addEventListener("click", function () {
@@ -39,11 +40,15 @@
            
            
             });
-              
+            temp = document.createElement("div")
+            temp.className = "temp"
+              localStorage.setItem(index,tsk.value)
             addList.innerHTML=index+". "+tsk.value;
-            body.appendChild(addList);
 
-            body.appendChild(addBox);
+            temp.appendChild(addList);
+            temp.appendChild(addBox);
+
+            body.appendChild(temp);
 
             /*
             const del = document.createElement("button");
@@ -58,14 +63,12 @@
             tsk.value = "";
 
         }
-        let md="Dark mode";
 
+        let md="Dark mode";
         function mode(){
         let body=document.getElementById("tk");
-        
-        let bt=document.getElementById("mode");
-        bt.addEventListener("click",mode)
-        function mode(){
+         
+        let bt=document.getElementById("mode");       
 
         if(md ==="Light mode"){
             body.style.backgroundColor="Black";
@@ -79,7 +82,7 @@
             
         }
 
-        }
+        
             
             
         }
@@ -92,29 +95,38 @@
             flex-flow: column wrap;
             justify-content: center;
             align-items: center;
-            gap:20px;
             background-color: black;
             font-size: x-large;
             flex:1;
+            margin-top: 100px;
             
+        }
+
+        .temp{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            background-color: goldenrod;
+            border-radius: 25px;
         }
 
         #inner{
             display: flex;
             flex-flow: row wrap;
             justify-content: space-between;
-            align-items: center;
-            gap:40px;
+            margin-top: 10px;
         }
+        
         #main{
             color: white;
             display: flex;
             flex-flow: column wrap;
             justify-content: center;
+            color: white;     
+            gap:10px;
             
             
-            
-           
         }
 
     </style>

@@ -10,25 +10,25 @@
             margin:0px;
             padding:0px;
         }
-        .container1,.container2,.container3{
-            background-color: aquamarine;
-            display: flex;
-            flex-flow:row wrap;
-            gap:10px;   
-            justify-content: center;
-            padding:25px;
-            
-
-        }
+ 
 
         .card{
             background-color: beige;
             color: rgb(0, 0, 0);
             border: 2px solid black;
-            border-radius: 5px;
-            width: 200px;
+            border-radius: 10px;
+            padding:50px;
+            text-align: center;
             flex:1;
         }
+
+        #ic{
+            display: flex;
+            flex-flow:row wrap;
+            gap:25px;
+        }
+
+
     </style>
 
 
@@ -37,7 +37,7 @@
 </head>
 <body>
 
-    <div class="bg-white p-5 rounded-xl flex-1 min-w-[250px]">
+    <div class="bg-white p-5 rounded-xl flex-1 min-w-[250px]"id="ic">
         <div class="card">
             <h3>Card 1</h3>
             <p>This is the first card</p>

@@ -12,9 +12,7 @@
         ol{
             list-style-type: none;
             display: flex;
-            flex-wrap: wrap;
-            
-            
+            flex-wrap: wrap;    
             
         }
         li,h1{
@@ -26,15 +24,13 @@
             font-size: 1.5rem;
         }
 
-
-
         nav{
             display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
+            flex-flow: row wrap;
             justify-content: space-between;
             background-color: rgb(35, 9, 9);
             align-items: center;
+            
             
         }
 
@@ -47,6 +43,11 @@
             object-fit: cover;
             z-index: -1;
 
+        }
+        ol{
+            display: flex;
+            gap:18px;
+            padding-right: 15px;
         }
 
 
@@ -100,12 +101,6 @@
         
         }
         
-       
-
-
-
-
-
 
     </style>
 </head>
@@ -155,9 +150,5 @@ Howard Schultz said, just lower the price of your coffee.</p><br>
         </ol>
     </footer>
 
-
-
-
-    
 </body>
 </html>
