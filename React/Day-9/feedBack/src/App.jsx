@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react'
 import api from './api/Post'
+import Home from './Home'
 import './App.css'
 
 function App() {
   const [posts,setPosts]=useState([])
+  const [search,setSearch] = useState("")
 
   useEffect(()=>
   {
@@ -16,19 +18,9 @@ function App() {
 
   return (
     <>
-    {
-      posts.map((post)=>
-        <div key={post.id}>
-        <h3>{post.title}</h3>
-        <p>{post.datetime}</p>
-        <p>{post.body}</p>
-        <hr />
-        </div>
+    <input type="text" value={search} onChange={(e)=> setSearch(e.target.value)} />
+    <Home posts={posts}/>
 
-      
-      )
-    }
-  
     </>
   )
 }
