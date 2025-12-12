@@ -5,6 +5,7 @@ const AddPost = () => {
     const {title,setTitle,body,setBody,handleSubmit}=useContext(DataContext)
   return (
     <div>
+      <h1>Post your feedbacks here</h1>
         <form action="" onSubmit={handleSubmit}>
         <input type="text" id="" placeholder='Title' className='tle' value={title} onChange={(e)=>setTitle(e.target.value)}/><br></br><br></br>
         <textarea name="" id="" placeholder='Body' className='bdy' value={body} onChange={(e)=>setBody(e.target.value)}></textarea><br></br>
