@@ -7,8 +7,8 @@ const AddPost = () => {
     <div>
       <h1>Post your feedbacks here</h1>
         <form action="" onSubmit={handleSubmit}>
-        <input type="text" id="" placeholder='Title' className='tle' value={title} onChange={(e)=>setTitle(e.target.value)}/><br></br><br></br>
-        <textarea name="" id="" placeholder='Body' className='bdy' value={body} onChange={(e)=>setBody(e.target.value)}></textarea><br></br>
+        <input type="text" id="" placeholder='Title' className='tle' value={title} onChange={(e)=>setTitle(e.target.value)} required/><br></br><br></br>
+        <textarea name="" id="" placeholder='Body' className='bdy' value={body} onChange={(e)=>setBody(e.target.value)} required></textarea><br></br>
         <button type='submit' className='btn'>Save</button>
         </form>
     </div>

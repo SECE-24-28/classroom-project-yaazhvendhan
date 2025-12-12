@@ -1,6 +1,7 @@
 import { format } from "date-fns";
 import {  createContext, useEffect, useState } from "react";
 import api from '../api/Post'
+import { useNavigate } from "react-router-dom";
 
 
 const DataContext=createContext()
@@ -12,6 +13,7 @@ export const DataProvider=({children})=>
   const [searchResult,setSearchResult]=useState([])
   const [title,setTitle]=useState('')
   const [body,setBody]=useState('')
+  const navigate=useNavigate()
 
   useEffect(()=>
   {
@@ -26,7 +28,7 @@ export const DataProvider=({children})=>
   useEffect(()=>
   {
     const filterd=posts.filter((post)=>(post.title.toLowerCase()).includes(search.toLowerCase()))
-    setSearchResult(filterd)
+    setSearchResult(filterd.reverse())
   },[posts,search])
 
 
@@ -42,6 +44,8 @@ export const DataProvider=({children})=>
     setPosts(newList)
     setTitle('')
     setBody('')
+    alert("Feedback posted")
+    navigate('/')
   }
 
     return (

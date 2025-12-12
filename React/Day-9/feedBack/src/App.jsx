@@ -8,6 +8,7 @@ import { format } from 'date-fns'
 import { DataProvider } from './context/DataContext'
 import { Link, Route, Routes } from 'react-router-dom'
 import NavBar from './NavBar'
+import EditPost from './EditPost'
 
 function App() {
   
@@ -22,6 +23,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/newpost' element={<AddPost />} />
+        <Route path='/editpost/:id' element={<EditPost />} />
+        
 {/* 
     <AddPost />
     <hr />

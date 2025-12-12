@@ -79,6 +79,52 @@ table,th,td{
   color: white;
 }
 
+.clink{
+  text-decoration: none;
+  color: white;
+}
+.clink:hover{
+  color:blanchedalmond;
+}
+
+.eddiv{
+  display: flex;
+  flex-flow:column wrap;
+  justify-content: center;
+  align-items: center;
+  gap:30px;
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  padding: 50px;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.edpt{
+  padding:30px;
+  padding-left: 100px;
+  padding-right: 100px;
+  text-align: center;
+  font-size: large;
+  border: solid rgb(20, 220, 200) 1px;
+  border-radius: 10px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 a {
