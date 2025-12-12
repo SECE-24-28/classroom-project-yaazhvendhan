@@ -5,7 +5,7 @@ const Home = () => {
   const{searchResult}=useContext(DataContext)
 
   return (
-    <div>
+    <div>posts.length-1
       <table className='tble'>
             <tr>
             <td>Title</td>
