@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div>
       <table className='tble'>
-                  <tr>
+            <tr>
             <td>Title</td>
             <td>Date&Time</td>
             <td>Body</td>
@@ -18,14 +18,12 @@ const Home = () => {
         
 
           <tr>
+            <td>{post.id}</td>
             <td>{post.title}</td>
             <td>{post.datetime}</td>
             <td>{post.body}</td>
           </tr>
           </tbody>
-
-       
-     
 
       
       )
