@@ -1,23 +1,27 @@
 import React, { useContext } from 'react'
 import DataContext from './context/DataContext'
+import Search from './Search'
 
 const Home = () => {
   const{searchResult}=useContext(DataContext)
 
   return (
-    <div>posts.length-1
+
+    <div className='container'>
+      <Search />< br></br>
       <table className='tble'>
             <tr>
+            <td>Id</td>
             <td>Title</td>
-            <td>Date&Time</td>
+            <td>Date & Time</td>
             <td>Body</td>
           </tr>
             {
       searchResult.map((post)=>
-      <tbody>
+      <tbody key={post.id}>
         
 
-          <tr>
+          <tr >
             <td>{post.id}</td>
             <td>{post.title}</td>
             <td>{post.datetime}</td>

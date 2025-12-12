@@ -6,19 +6,29 @@ import AddPost from './AddPost'
 import './App.css'
 import { format } from 'date-fns'
 import { DataProvider } from './context/DataContext'
+import { Link, Route, Routes } from 'react-router-dom'
+import NavBar from './NavBar'
 
 function App() {
   
 
   return (
     <>
+ 
+    <NavBar />
+
+
     <DataProvider>
-    <Search />
-            <hr />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/newpost' element={<AddPost />} />
+{/* 
     <AddPost />
     <hr />
     <br /> 
-    <Home />
+    <Home /> */}
+
+    </Routes>
 </DataProvider>
     </>
   )
