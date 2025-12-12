@@ -30,7 +30,7 @@ useEffect(()=>{
 
   return (
     <div className='tmls'>
-        <div class='rc'>
+        <div className='rc'>
 
         <h3>Our Customer Reviews</h3>
         <div className="rws">

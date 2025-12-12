@@ -3,7 +3,7 @@ import DataContext from './context/DataContext'
 import { useParams } from 'react-router-dom'
 
 const EditPost = () => {
-    const {posts}=useContext(DataContext)
+    const {posts,handleDelete}=useContext(DataContext)
     const {id}=useParams()
     const post=posts.find((p)=>p.id==id)
     if(!post){
@@ -17,7 +17,7 @@ const EditPost = () => {
         <h1>Edit Post</h1>
         <input type='text' value={post.title} className='edpt'/>
         <textarea value={post.body} className='edpt'/>
-        <button className='btn'>Delete</button>
+        <button className='btn' onClick={()=>handleDelete(post.id)}>Delete</button>
 
     </div>
   )

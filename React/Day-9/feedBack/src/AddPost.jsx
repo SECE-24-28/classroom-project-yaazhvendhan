@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import DataContext from './context/DataContext'
+import Post from './api/Post'
 
 const AddPost = () => {
     const {title,setTitle,body,setBody,handleSubmit}=useContext(DataContext)

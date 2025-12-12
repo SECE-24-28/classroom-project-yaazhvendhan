@@ -48,8 +48,27 @@ export const DataProvider=({children})=>
     navigate('/')
   }
 
+
+  const handleDelete=async(id)=>
+  {
+    try
+    {
+      await api.delete(`/feedback/${id}`)
+      alert("Post Deleted")
+      const newList=posts.filter((post)=>post.id!=id)
+      setPosts(newList)
+      navigate('/')
+
+    }
+    catch(err)
+    {
+      console.log(err)
+    }
+  }
+
+
     return (
-        <DataContext.Provider value={{posts,title,setTitle,body,setBody,search,setSearch,searchResult,handleSubmit}}>
+        <DataContext.Provider value={{posts,title,setTitle,body,setBody,search,setSearch,searchResult,handleSubmit,handleDelete}}>
             {children}
         </DataContext.Provider>
     )
