@@ -24,7 +24,7 @@ app.get("/api/courses/:id",(req,res)=>{
 
 app.post("/api/courses",(req,res)=>{
     const {cname,cdur}= req.body;
-    const cid = (courses.length)?(courses[courses.length-1].id+1):1;
+    const cid = (courses.length)?(courses[courses.length-1].cid+1):1;
     const newCourse = {cid,cname,cdur};
     courses.push(newCourse);
     res.json(newCourse)
@@ -42,13 +42,13 @@ app.put("/api/courses/:id",(req,res)=>{
     res.json(course);
 });
 
-app.delete(".api/courses/:id",(req,res)=>{
-    const id = Number(res.param.id);
+app.delete("/api/courses/:id",(req,res)=>{
+    const id = Number(req.params.id);
     courses= courses.filter(c => c.cid !== id);
     res.json({message:"Course Deleted Successfully"});
 });
 
 
 app.listen(PORT,()=>{
-    console.log(`Server Running on http://localhos:${PORT}`)
+    console.log(`Server Running on http://localhost:${PORT}`)
 });

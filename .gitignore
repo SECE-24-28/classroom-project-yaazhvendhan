@@ -5,3 +5,13 @@ linux_circulatory.jpg
 miles-morales-logo.jpg
 Red Hat.jpg
 /samples
+
+
+videos/
+images/
+node_modules/
+.DS_Store
+.env
+*.log
+build/
+dist/
