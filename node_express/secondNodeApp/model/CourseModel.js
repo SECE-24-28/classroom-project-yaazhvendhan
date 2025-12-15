@@ -1,8 +1,12 @@
-const mongoose = require("mongose")
+const mongoose = require("mongoose");
 
-const courseSchema = new mongoose.Schema({
-    title:{type:String,required:true},
-    duration:{type:String,required:true}
-});
+const courseSchema = new mongoose.Schema(
+  {
+    title: { type: String, required: true },
+    duration: { type: String, required: true },
+  },
+  { timestamps: true }
+);
 
-exports.model=mongoose.model("mycourse",courseSchema)
+// Export the model directly
+module.exports = mongoose.model("Course", courseSchema);
