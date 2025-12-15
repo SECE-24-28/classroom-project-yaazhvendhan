@@ -14,3 +14,35 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.frm{
+  display: flex;
+  flex-flow: column wrap;
+  gap: 10px;
+  align-items: center;
+  padding: 100px;
+}
+
+input{
+  background-color: white;
+  border-color: brown;
+  color: black;
+  padding: 20px;
+  font-size: large;
+  padding-left: 100px;
+  padding-right: 100px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+button{
+  background-color: white;
+  border-color: brown;
+  color: black;
+  padding: 20px;
+  padding-left: 80px;
+  padding-right: 80px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: x-large;
+}
