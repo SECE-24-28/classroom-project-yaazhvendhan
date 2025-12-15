@@ -71,10 +71,21 @@ app.put("/api/courses/:id", async (req, res) => {
   }
 });
 
+// Delete posts
+app.delete("/api/courses/:id", async (req, res) => {
+  try {
+    const course = await course.findByIdAndDelete(req.params.id);
 
+    if (!course) {
+      return res.status(404).json({ message: "Course not found" });
+    }
 
-
-
+    res.json({ message: "Course deleted successfully" });
+  } catch (err) {
+    console.error("DELETE ERROR:", err);
+    res.status(500).json({ message: err.message });
+  }
+});
 
 
 
