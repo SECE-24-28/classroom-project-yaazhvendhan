@@ -39,10 +39,15 @@ button{
   background-color: white;
   border-color: brown;
   color: black;
-  padding: 20px;
-  padding-left: 80px;
-  padding-right: 80px;
+  padding: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
   border-radius: 20px;
   text-align: center;
   font-size: x-large;
+}
+
+
+table{
+  border: 2px solid black;
 }

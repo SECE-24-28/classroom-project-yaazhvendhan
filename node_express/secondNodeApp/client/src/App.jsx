@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
-import { addCourses, getCourses } from './api/CourseApi'
+import { addCourses, deleteCourses, getCourses, updateCourses } from './api/CourseApi'
 
 function App() {
   const [courses, setCourses] = useState([])
   const [title, setTitle] = useState("")
   const [duration, setDuration] = useState("")
+  const [editId, setEditId] = useState(null)
 
   const fetchCourse = async () => {
     const res = await getCourses()
@@ -15,17 +16,37 @@ function App() {
     fetchCourse()
   }, [])
 
+  // 🔹 ADD or UPDATE (single form logic)
   const handleSubmit = async (e) => {
     e.preventDefault()
 
     const course = { title, duration }
-    const res = await addCourses(course)
 
-    //  append the newly created course
-    setCourses(prevCourses => [...prevCourses, res.data])
+    if (editId) {
+      // UPDATE
+      await updateCourses(editId, course)
+      setEditId(null)
+    } else {
+      // ADD
+      const res = await addCourses(course)
+      setCourses(prev => [...prev, res.data])
+    }
 
     setTitle("")
     setDuration("")
+    fetchCourse()
+  }
+
+  const handleDelete = async (id) => {
+    await deleteCourses(id)
+    fetchCourse()
+    alert("Course deleted successfully")
+  }
+
+  const handleEdit = (course) => {
+    setTitle(course.title)
+    setDuration(course.duration)
+    setEditId(course._id)
   }
 
   return (
@@ -47,16 +68,37 @@ function App() {
           required
         />
 
-        <button type="submit">Add</button>
+        <button type="submit">
+          {editId ? "Update" : "Add"}
+        </button>
       </form>
 
-      <ul>
-        {courses.map(course => (
-          <li key={course._id}>
-            {course.title} - {course.duration}
-          </li>
-        ))}
-      </ul>
+      <table>
+        <thead>
+          <tr>
+            <th>Course Title</th>
+            <th>Duration</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {courses.map(course => (
+            <tr key={course._id}>
+              <td>{course.title}</td>
+              <td>{course.duration}</td>
+              <td>
+                <button type="button" onClick={() => handleEdit(course)}>
+                  Edit
+                </button>
+                <button type="button" onClick={() => handleDelete(course._id)}>
+                  Delete
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </>
   )
 }

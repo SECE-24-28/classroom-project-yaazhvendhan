@@ -74,9 +74,9 @@ app.put("/api/courses/:id", async (req, res) => {
 // Delete posts
 app.delete("/api/courses/:id", async (req, res) => {
   try {
-    const course = await course.findByIdAndDelete(req.params.id);
+    const deletedCourse = await Course.findByIdAndDelete(req.params.id);
 
-    if (!course) {
+    if (!deletedCourse) {
       return res.status(404).json({ message: "Course not found" });
     }
 
