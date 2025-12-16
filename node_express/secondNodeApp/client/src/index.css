@@ -39,9 +39,9 @@ button{
   background-color: white;
   border-color: brown;
   color: black;
-  padding: 10px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 4px;
+  padding-left: 30px;
+  padding-right: 30px;
   border-radius: 20px;
   text-align: center;
   font-size: x-large;
@@ -50,4 +50,7 @@ button{
 
 table{
   border: 2px solid black;
+  margin-left: 730px;
 }
+
+
